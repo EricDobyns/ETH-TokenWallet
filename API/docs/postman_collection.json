@@ -1,0 +1,1181 @@
+{
+	"info": {
+		"name": "Skeleton Coin",
+		"_postman_id": "33bbeba9-6388-1ef4-d5e2-1ec465c55292",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Web",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:1337",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/wallet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+							},
+							{
+								"key": "DeviceId",
+								"value": "1234"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1337/wallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"wallet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API",
+			"description": "",
+			"item": [
+				{
+					"name": "v1",
+					"description": "",
+					"item": [
+						{
+							"name": "Owner (Token Issuer)",
+							"description": "",
+							"item": [
+								{
+									"name": "/owner/:walletAddress",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/owner/:walletAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"owner",
+												":walletAddress"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/owner/:walletAddress/token/:tokenAddress",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/owner/:walletAddress/token/:tokenAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"owner",
+												":walletAddress",
+												"token",
+												":tokenAddress"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												},
+												{
+													"key": "tokenAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/owner/:walletAddress/token/:tokenAddress/mint",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/owner/:walletAddress/token/:tokenAddress/mint",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"owner",
+												":walletAddress",
+												"token",
+												":tokenAddress",
+												"mint"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												},
+												{
+													"key": "tokenAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/owner/:walletAddress/token/:tokenAddress/transfer",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/owner/:walletAddress/token/:tokenAddress/transfer",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"owner",
+												":walletAddress",
+												"token",
+												":tokenAddress",
+												"transfer"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												},
+												{
+													"key": "tokenAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Wallet (Token Holder)",
+							"description": "",
+							"item": [
+								{
+									"name": "/wallet/:walletAddress",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/wallet/0x76997ad337fe595d0fad31322fad4049d9339191",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"wallet",
+												"0x76997ad337fe595d0fad31322fad4049d9339191"
+											]
+										},
+										"description": "Get all wallet information"
+									},
+									"response": []
+								},
+								{
+									"name": "/wallet/:walletAddress/balance",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/wallet/0x76997ad337fe595d0fad31322fad4049d9339191/balance",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"wallet",
+												"0x76997ad337fe595d0fad31322fad4049d9339191",
+												"balance"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/wallet/:walletAddress/token/:tokenAddress",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/wallet/:walletAddress/token/:tokenAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"wallet",
+												":walletAddress",
+												"token",
+												":tokenAddress"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												},
+												{
+													"key": "tokenAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": "Query Variable Examples:\n\n- ?symbol=SK\n- ?address=0x1234"
+									},
+									"response": [
+										{
+											"id": "44a5ab19-de6c-46a4-a87c-9c01671e1b99",
+											"name": "Query By Symbol",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "apiKey",
+														"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+													},
+													{
+														"key": "DeviceId",
+														"value": "1234"
+													}
+												],
+												"body": {},
+												"url": {
+													"raw": "http://localhost:1337/api/v1/wallet/0x76997ad337fe595d0fad31322fad4049d9339191/token?symbol=SK",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "1337",
+													"path": [
+														"api",
+														"v1",
+														"wallet",
+														"0x76997ad337fe595d0fad31322fad4049d9339191",
+														"token"
+													],
+													"query": [
+														{
+															"key": "symbol",
+															"value": "SK",
+															"equals": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"_postman_previewtype": "text",
+											"header": [
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*",
+													"name": "Access-Control-Allow-Origin",
+													"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive",
+													"name": "Connection",
+													"description": "Options that are desired for the connection"
+												},
+												{
+													"key": "Content-Length",
+													"value": "54",
+													"name": "Content-Length",
+													"description": "The length of the response body in octets (8-bit bytes)"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8",
+													"name": "Content-Type",
+													"description": "The mime type of this content"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 06 Nov 2017 04:18:43 GMT",
+													"name": "Date",
+													"description": "The date and time that the message was sent"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"36-WueeqEJP8fpA/xHpc7+H79+LwQQ\"",
+													"name": "ETag",
+													"description": "An identifier for a specific version of a resource, often a message digest"
+												},
+												{
+													"key": "Strict-Transport-Security",
+													"value": "max-age=15552000; includeSubDomains",
+													"name": "Strict-Transport-Security",
+													"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff",
+													"name": "X-Content-Type-Options",
+													"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+												},
+												{
+													"key": "X-DNS-Prefetch-Control",
+													"value": "off",
+													"name": "X-DNS-Prefetch-Control",
+													"description": "Custom header"
+												},
+												{
+													"key": "X-Download-Options",
+													"value": "noopen",
+													"name": "X-Download-Options",
+													"description": "Custom header"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "SAMEORIGIN",
+													"name": "X-Frame-Options",
+													"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block",
+													"name": "X-XSS-Protection",
+													"description": "Cross-site scripting (XSS) filter"
+												}
+											],
+											"cookie": [
+												{
+													"expires": "Thu Jan 14 2038 19:14:07 GMT-0800 (PST)",
+													"httpOnly": true,
+													"domain": "localhost",
+													"path": "/",
+													"secure": false,
+													"value": "s%3AE2bVIOages_CVL9D6yCm0ZqKrsdXFlZu.sspLXG34%2Bu1Xz9uyheX%2F5rwk0KuBuTUMsXOPDdg2%2Bq4",
+													"key": "connect.sid"
+												}
+											],
+											"responseTime": 7,
+											"body": "{\"error\":\"Missing required parameter: Wallet Address\"}"
+										},
+										{
+											"id": "6e280e62-f8dd-4bd0-9a08-37518eb76d51",
+											"name": "Query By Address",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "apiKey",
+														"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53",
+														"disabled": false
+													},
+													{
+														"key": "DeviceId",
+														"value": "1234",
+														"disabled": false
+													}
+												],
+												"body": {},
+												"url": {
+													"raw": "http://localhost:1337/api/v1/wallet/0x76997ad337fe595d0fad31322fad4049d9339191/token?address=0x1234",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "1337",
+													"path": [
+														"api",
+														"v1",
+														"wallet",
+														"0x76997ad337fe595d0fad31322fad4049d9339191",
+														"token"
+													],
+													"query": [
+														{
+															"key": "address",
+															"value": "0x1234",
+															"equals": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"_postman_previewtype": "text",
+											"header": [
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*",
+													"name": "Access-Control-Allow-Origin",
+													"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive",
+													"name": "Connection",
+													"description": "Options that are desired for the connection"
+												},
+												{
+													"key": "Content-Length",
+													"value": "54",
+													"name": "Content-Length",
+													"description": "The length of the response body in octets (8-bit bytes)"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8",
+													"name": "Content-Type",
+													"description": "The mime type of this content"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 06 Nov 2017 04:18:43 GMT",
+													"name": "Date",
+													"description": "The date and time that the message was sent"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"36-WueeqEJP8fpA/xHpc7+H79+LwQQ\"",
+													"name": "ETag",
+													"description": "An identifier for a specific version of a resource, often a message digest"
+												},
+												{
+													"key": "Strict-Transport-Security",
+													"value": "max-age=15552000; includeSubDomains",
+													"name": "Strict-Transport-Security",
+													"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff",
+													"name": "X-Content-Type-Options",
+													"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+												},
+												{
+													"key": "X-DNS-Prefetch-Control",
+													"value": "off",
+													"name": "X-DNS-Prefetch-Control",
+													"description": "Custom header"
+												},
+												{
+													"key": "X-Download-Options",
+													"value": "noopen",
+													"name": "X-Download-Options",
+													"description": "Custom header"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "SAMEORIGIN",
+													"name": "X-Frame-Options",
+													"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block",
+													"name": "X-XSS-Protection",
+													"description": "Cross-site scripting (XSS) filter"
+												}
+											],
+											"cookie": [
+												{
+													"expires": "Thu Jan 14 2038 19:14:07 GMT-0800 (PST)",
+													"httpOnly": true,
+													"domain": "localhost",
+													"path": "/",
+													"secure": false,
+													"value": "s%3AE2bVIOages_CVL9D6yCm0ZqKrsdXFlZu.sspLXG34%2Bu1Xz9uyheX%2F5rwk0KuBuTUMsXOPDdg2%2Bq4",
+													"key": "connect.sid"
+												}
+											],
+											"responseTime": 7,
+											"body": "{\"error\":\"Missing required parameter: Wallet Address\"}"
+										}
+									]
+								},
+								{
+									"name": "/wallet/:walletAddress/token/:tokenAddress/allowance/:spenderAddress",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/wallet/:walletAddress/token/:tokenAddress/allowance/:spenderAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"wallet",
+												":walletAddress",
+												"token",
+												":tokenAddress",
+												"allowance",
+												":spenderAddress"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												},
+												{
+													"key": "tokenAddress",
+													"value": ""
+												},
+												{
+													"key": "spenderAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/wallet/:walletAddress/token/:tokenAddress/approve/:spenderAddress",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/wallet/:walletAddress/token/:tokenAddress/approve/:spenderAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"wallet",
+												":walletAddress",
+												"token",
+												":tokenAddress",
+												"approve",
+												":spenderAddress"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												},
+												{
+													"key": "tokenAddress",
+													"value": ""
+												},
+												{
+													"key": "spenderAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/wallet/:walletAddress/token/:tokenAddress/increaseApproval/:spenderAddress",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/wallet/:walletAddress/token/:tokenAddress/increaseApproval",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"wallet",
+												":walletAddress",
+												"token",
+												":tokenAddress",
+												"increaseApproval"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												},
+												{
+													"key": "tokenAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/wallet/:walletAddress/token/:tokenAddress/decreaseApproval/:spenderAddress",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/wallet/:walletAddress/token/:tokenAddress/decreaseApproval",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"wallet",
+												":walletAddress",
+												"token",
+												":tokenAddress",
+												"decreaseApproval"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												},
+												{
+													"key": "tokenAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/wallet/:walletAddress/token/:tokenAddress/transferFrom",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/wallet/:walletAddress/token/:tokenAddress/approve/:spenderAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"wallet",
+												":walletAddress",
+												"token",
+												":tokenAddress",
+												"approve",
+												":spenderAddress"
+											],
+											"variable": [
+												{
+													"key": "walletAddress",
+													"value": ""
+												},
+												{
+													"key": "tokenAddress",
+													"value": ""
+												},
+												{
+													"key": "spenderAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Token",
+							"description": "",
+							"item": [
+								{
+									"name": "/token/:contractAddress",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/token/:contractAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"token",
+												":contractAddress"
+											],
+											"variable": [
+												{
+													"key": "contractAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/token/:contractAddress/tx",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/token/:contractAddress/tx",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"token",
+												":contractAddress",
+												"tx"
+											],
+											"variable": [
+												{
+													"key": "contractAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": "Get all transactions associated with a token"
+									},
+									"response": []
+								},
+								{
+									"name": "/token/:contractAddress/tx/:txAddress",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/token/:contractAddress/tx/:txAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"token",
+												":contractAddress",
+												"tx",
+												":txAddress"
+											],
+											"variable": [
+												{
+													"key": "contractAddress",
+													"value": ""
+												},
+												{
+													"key": "txAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": "Get a specific transaction associated with a token"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Crowdsale",
+							"description": "",
+							"item": [
+								{
+									"name": "/crowdsale/:contractAddress",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/crowdsale/:contractAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"crowdsale",
+												":contractAddress"
+											],
+											"variable": [
+												{
+													"key": "contractAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": "Get crowdsale contract information"
+									},
+									"response": []
+								},
+								{
+									"name": "/crowdsale/:contractAddress/tx",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/crowdsale/:contractAddress/tx",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"crowdsale",
+												":contractAddress",
+												"tx"
+											],
+											"variable": [
+												{
+													"key": "contractAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": "Get all transactions associated with the contract"
+									},
+									"response": []
+								},
+								{
+									"name": "/crowdsale/:contractAddress/tx/:txAddress",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apiKey",
+												"value": "31e633b9-4bdf-4174-9611-b6ee9ce54c53"
+											},
+											{
+												"key": "DeviceId",
+												"value": "1234"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:1337/api/v1/crowdsale/:contractAddress/tx/:txAddress",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1337",
+											"path": [
+												"api",
+												"v1",
+												"crowdsale",
+												":contractAddress",
+												"tx",
+												":txAddress"
+											],
+											"variable": [
+												{
+													"key": "contractAddress",
+													"value": ""
+												},
+												{
+													"key": "txAddress",
+													"value": ""
+												}
+											]
+										},
+										"description": "Get a specific transaction associated with the contract"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "v2",
+					"description": "",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:1337/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"status"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
